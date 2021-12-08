@@ -8,18 +8,17 @@ import java.util.*;
 public class Exercise001 {
     public String capitalizeWord(String word) {
         if (word == null || word.isEmpty()) {
-            return word;
+            throw new NullPointerException("Cannot capitalize null or empty word");
         } else {
-            String capitalString = word.substring(0, 1).toUpperCase() + word.substring(1);
-            return capitalString;
+            return word.substring(0, 1).toUpperCase() + word.substring(1);
         }
     }
 
     public String generateInitials(String firstName, String lastName) {
         if (firstName == null || firstName.isEmpty()) {
-            return firstName;
-        } else if (lastName == null|| lastName.isEmpty()){
-            return lastName;
+            throw new NullPointerException("First name is null or empty");
+        } else if (lastName == null|| lastName.isEmpty()) {
+            throw new NullPointerException("Last name is null or empty");
         } else {
             return firstName.substring(0,1).toUpperCase() + "." + lastName.substring(0,1).toUpperCase();
         }
@@ -33,7 +32,7 @@ public class Exercise001 {
 
     public String reverse(String sentence) {
         if (sentence == null || sentence.isEmpty()) {
-            return sentence;
+            throw new NullPointerException("Sentence to Reverse is null or empty");
         } else {
             StringBuilder revStr = new StringBuilder();
             revStr.append(sentence);
@@ -42,12 +41,10 @@ public class Exercise001 {
     }
 
     public int countLinuxUsers(List<User> users) {
-
-        // Add your code here
-        Integer cnt = 0;
+        int cnt = 0;
         for (int i=0;i<users.size();i++) {
             User user1 = users.get(i);
-            if (user1.getType() == "Linux") {
+            if (user1.getType().equals("Linux")) {
                 cnt ++;
             }
         }

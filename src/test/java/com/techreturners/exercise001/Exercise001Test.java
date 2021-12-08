@@ -1,11 +1,12 @@
 package com.techreturners.exercise001;
 
-import static org.junit.Assert.assertEquals;
-
 import java.util.ArrayList;
 import java.util.List;
 
+import org.junit.Assert;
 import org.junit.Test;
+
+import static org.junit.Assert.*;
 
 public class Exercise001Test {
 
@@ -67,5 +68,19 @@ public class Exercise001Test {
         users.add(u3);
         users.add(u4);
         assertEquals(2, ex001.countLinuxUsers(users));
+    }
+
+
+   // @Test(expected=NullPointerException.class)
+    @Test
+    public void checkNullPointerException() {
+        Exercise001 ex001 = new Exercise001();
+        try {
+            ex001.capitalizeWord(null);
+            fail("Failed to throw Exception");
+        } catch (NullPointerException expected) {
+            assertEquals(NullPointerException.class, expected.getClass());
+            System.out.println(expected);
+        }
     }
 }
