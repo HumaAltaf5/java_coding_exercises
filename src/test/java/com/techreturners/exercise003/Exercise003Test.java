@@ -16,6 +16,23 @@ public class Exercise003Test {
     }
 
     @Test
+    public void checkGetIceCreamCodeForPistachio() {
+        String iceCreamFlavour = "Pistachio";
+        int expected = 0;
+
+        assertEquals(expected, ex003.getIceCreamCode(iceCreamFlavour));
+    }
+
+    @Test
+    public void checkGetIceCreamCodeForVanilla() {
+        String iceCreamFlavour = "Vanilla";
+        int expected = 2;
+
+        assertEquals(expected, ex003.getIceCreamCode(iceCreamFlavour));
+    }
+
+
+    @Test
     public void checkGetIceCreamCodeForMintChocolateChip() {
         String iceCreamFlavour = "Mint Chocolate Chip";
         int expected = 3;
@@ -23,7 +40,15 @@ public class Exercise003Test {
         assertEquals(expected, ex003.getIceCreamCode(iceCreamFlavour));
     }
 
-    @Ignore("You can remove this @ignore annotation to run the test")
+    @Test
+    public void checkGetIceCreamCodeForChocolate() {
+        String iceCreamFlavour = "Chocolate";
+        int expected = 4;
+
+        assertEquals(expected, ex003.getIceCreamCode(iceCreamFlavour));
+    }
+
+
     @Test
     public void checkGetIceCreamCodeForMangoSorbet() {
         String iceCreamFlavour = "Mango Sorbet";
@@ -32,7 +57,6 @@ public class Exercise003Test {
         assertEquals(expected, ex003.getIceCreamCode(iceCreamFlavour));
     }
 
-    @Ignore("You can remove this @ignore annotation to run the test")
     @Test
     public void checkGetIceCreamCodeForRaspberryRipple() {
         String iceCreamFlavour = "Raspberry Ripple";
@@ -41,7 +65,6 @@ public class Exercise003Test {
         assertEquals(expected, ex003.getIceCreamCode(iceCreamFlavour));
     }
 
-    @Ignore("You can remove this @ignore annotation to run the test")
     @Test
     public void checkPickMultipleIceCreamFlavours() {
 
