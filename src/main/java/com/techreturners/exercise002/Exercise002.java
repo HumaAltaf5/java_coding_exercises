@@ -3,33 +3,33 @@ package com.techreturners.exercise002;
 public class Exercise002 {
 
     public boolean isFromManchester(Person person) {
-        if (person.city == "Manchester") {
-            return true;
-        } else {
-            return false;
-        }
+        return person.getCity().equals("Manchester");
     }
 
     public boolean canWatchFilm(Person person, int ageLimit) {
-        if (person.age >= ageLimit) {
-            return true;
-        } else {
-            return false;
-        }
+        return (person.getAge() >= ageLimit) ;
     }
     
 }
 
-class Person {
-    String name;
-    String surname;
-    String city;
-    int age;
+    class Person {
+        private String name;
+        private String surname;
+        private String city;
+        private int age;
 
-    public Person(String personName, String personSurname, String personCity, int personAge) {
-        name =  personName;
-        surname = personSurname;
-        city = personCity;
-        age = personAge;
+        public String getCity() {
+            return city;
+        }
+
+        public int getAge() {
+            return age;
+        }
+
+        public Person(String personName, String personSurname, String personCity, int personAge) {
+            name =  personName;
+            surname = personSurname;
+            city = personCity;
+            age = personAge;
+        }
     }
-}
