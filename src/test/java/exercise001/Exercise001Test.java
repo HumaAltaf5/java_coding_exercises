@@ -1,8 +1,10 @@
-package com.techreturners.exercise001;
+package exercise001;
 
 import java.util.ArrayList;
 import java.util.List;
 
+import com.techreturners.exercise001.Exercise001;
+import com.techreturners.exercise001.User;
 import org.junit.Assert;
 import org.junit.Test;
 
@@ -71,7 +73,6 @@ public class Exercise001Test {
     }
 
 
-   // @Test(expected=NullPointerException.class)
     @Test
     public void checkNullPointerException() {
         Exercise001 ex001 = new Exercise001();
