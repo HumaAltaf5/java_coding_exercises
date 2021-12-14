@@ -1,14 +1,14 @@
-package com.techreturners;
-
-import com.techreturners.exercise001.Exercise001;
-import com.techreturners.exercise001.User;
-import org.junit.Test;
+package com.techreturners.exercise001;
 
 import java.util.ArrayList;
 import java.util.List;
 
-import static org.junit.Assert.assertEquals;
-import static org.junit.Assert.fail;
+import com.techreturners.exercise001.Exercise001;
+import com.techreturners.exercise001.User;
+import org.junit.Assert;
+import org.junit.Test;
+
+import static org.junit.Assert.*;
 
 public class Exercise001Test {
 
